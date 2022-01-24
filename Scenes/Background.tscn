@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/mapTile_022.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+modulate = Color( 0.603922, 0.603922, 0.603922, 1 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 180, 320 )
+__meta__ = {
+"_edit_lock_": true
+}
