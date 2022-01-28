@@ -12,6 +12,7 @@ config_version=4
 
 config/name="Plane Survival"
 run/main_scene="res://Scenes/Menu.tscn"
+config/icon="res://icon.png"
 
 [autoload]
 
@@ -25,6 +26,10 @@ window/size/test_width=320
 window/size/test_height=640
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+android=false
 
 [importer_defaults]
 
@@ -87,4 +92,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/driver/fallback_to_gles2=true
 environment/default_environment="res://default_env.tres"
