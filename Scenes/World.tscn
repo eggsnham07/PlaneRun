@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,10 @@
 [ext_resource path="res://Assets/explosionCrunch_000.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Assets/CustomFont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scenes/ScoreLabel.gd" type="Script" id=8]
+[ext_resource path="res://Assets/RightArrow.png" type="Texture" id=9]
+[ext_resource path="res://Assets/LeftArrow.png" type="Texture" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
 
 [node name="World" type="Node"]
 script = ExtResource( 3 )
@@ -16,7 +20,7 @@ EnemyScene = ExtResource( 4 )
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 96, 304 )
+position = Vector2( 90, 300 )
 
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
@@ -42,6 +46,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MoveLeft" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 9.53674e-07, 280 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 10 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MoveRight" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 140, 280 )
+scale = Vector2( 0.2, 0.2 )
+normal = ExtResource( 9 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="died" from="Player" to="." method="_on_Player_died"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 [connection signal="finished" from="ExplosionSound" to="." method="_on_ExplosionSound_finished"]
+[connection signal="pressed" from="CanvasLayer/MoveLeft" to="." method="_on_MoveLeft_pressed"]
