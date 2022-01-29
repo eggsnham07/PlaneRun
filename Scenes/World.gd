@@ -13,12 +13,11 @@ func _on_enemy_exited():
 	$CanvasLayer/ScoreLabel.add_score()
 
 func _on_Player_died():
-	if int($CanvasLayer/ScoreLabel.score) > int(Global.load_file("highscore.dat")):
-		Global.save_file("highscore.dat", str($CanvasLayer/ScoreLabel.score))
-		
 	$Particles2D.position = $Player.position
 	$Particles2D.emitting = true
 	$ExplosionSound.play()
+	if int($CanvasLayer/ScoreLabel.score) > int(Global.load_file("highscore.dat")):
+		Global.save_file("highscore.dat", str($CanvasLayer/ScoreLabel.score))
 
 
 func _on_ExplosionSound_finished():

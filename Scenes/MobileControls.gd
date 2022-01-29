@@ -1,15 +1,16 @@
 extends CanvasLayer
 
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	if JavaScript.eval(
-		"function is_touch_enabled() {\n" +
-		"	return ( 'ontouchstart' in window ) ||\n" +
-		"			( navigator.maxTouchPoints > 0 ) ||\n" +
-		"			( navigator.msMaxTouchPoints > 0 );\n" +
-		"}"
-	) == true:
-		print("Mobile platform")
-	else:
-		print("Desktop platform")
-		$Left.hide()
-		$Right.hide()
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
