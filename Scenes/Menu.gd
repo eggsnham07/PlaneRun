@@ -5,3 +5,9 @@ func _ready():
 
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://Scenes/World.tscn")
+
+func _on_QuitButton_pressed():
+	if OS.get_executable_path() == "tmp_js_export" || OS.get_executable_path() == "index" || OS.get_executable_path() == "game":
+		JavaScript.eval("window.location.href = 'https://planerun.eggsnham.com/'")
+	else:
+		get_tree().quit()
