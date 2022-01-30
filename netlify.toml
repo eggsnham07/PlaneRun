@@ -1,0 +1,4 @@
+[build]
+    base = "HTML/"
+    publish = "HTML/build/"
+    command = "npm install && cd HTML && npm run build"

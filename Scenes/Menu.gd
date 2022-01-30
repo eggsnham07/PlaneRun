@@ -8,6 +8,6 @@ func _on_StartButton_pressed():
 
 func _on_QuitButton_pressed():
 	if OS.get_executable_path() == "tmp_js_export" || OS.get_executable_path() == "index" || OS.get_executable_path() == "game":
-		JavaScript.eval("window.location.href = 'https://planerun.eggsnham.com/'")
+		JavaScript.eval("window.location.href = `${location.href.split('/game')[0]}`")
 	else:
 		get_tree().quit()
