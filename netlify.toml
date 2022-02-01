@@ -1,4 +1,0 @@
-[build]
-    base = "HTML/"
-    publish = "build/"
-    command = "npm run build"

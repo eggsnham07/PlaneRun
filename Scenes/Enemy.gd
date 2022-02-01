@@ -1,7 +1,7 @@
 extends Area2D
 
 signal screen_exited
-export var speed = 250
+export var speed = 400
 
 func _process(delta):
 	position.y = position.y + speed * delta

@@ -21,17 +21,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ship0000" type="Sprite" parent="."]
-position = Vector2( 96, 48 )
-scale = Vector2( 2.25, 2.25 )
+[node name="ShipBlue" type="Sprite" parent="."]
+position = Vector2( 512, 88 )
+scale = Vector2( 2, 2 )
+z_index = 2
 texture = ExtResource( 3 )
 
 [node name="Sprite" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 2.22609, 1.8 )
+region_rect = Rect2( 0, 0, 460.753, 320 )
 
 [node name="Title" type="Label" parent="."]
 anchor_right = 1.0
-margin_top = 96.0
-margin_bottom = 126.0
+margin_top = 144.0
+margin_bottom = 174.0
 custom_fonts/font = SubResource( 1 )
 text = "Plane Run"
 align = 1
@@ -45,10 +48,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -50.0
+margin_left = -64.0
 margin_top = -184.0
-margin_right = 50.0
-margin_bottom = -157.0
+margin_right = 58.0
+margin_bottom = -144.0
 rect_min_size = Vector2( 100, 0 )
 custom_fonts/font = ExtResource( 2 )
 text = "Start"
@@ -57,29 +60,34 @@ __meta__ = {
 }
 
 [node name="Ship0005" type="Sprite" parent="."]
-position = Vector2( 32, 248 )
+position = Vector2( 448, 304 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="Ship0008" type="Sprite" parent="."]
-position = Vector2( 64, 296 )
+position = Vector2( 480, 352 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="Ship0009" type="Sprite" parent="."]
-position = Vector2( 152, 232 )
+position = Vector2( 568, 288 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="Ship0006" type="Sprite" parent="."]
-position = Vector2( 88, 224 )
+position = Vector2( 504, 280 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="Ship0007" type="Sprite" parent="."]
-position = Vector2( 112, 264 )
+position = Vector2( 528, 320 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 6 )
 
 [node name="HighScore" type="Label" parent="."]
 anchor_right = 1.0
-margin_top = 176.0
-margin_bottom = 197.0
+margin_top = 216.0
+margin_bottom = 237.0
 custom_fonts/font = ExtResource( 2 )
 text = "High Score: 0"
 align = 1
@@ -87,16 +95,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ship0000" type="Sprite" parent="HighScore"]
-position = Vector2( 90, -128 )
-scale = Vector2( 2, 2 )
-texture = ExtResource( 3 )
-
 [node name="QuitButton" type="Button" parent="."]
-margin_left = 120.0
-margin_top = 288.0
-margin_right = 170.0
-margin_bottom = 315.0
+margin_left = 448.0
+margin_top = 448.0
+margin_right = 570.0
+margin_bottom = 488.0
 custom_fonts/font = ExtResource( 2 )
 text = "Quit"
 __meta__ = {

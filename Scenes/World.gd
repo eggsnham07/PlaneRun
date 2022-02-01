@@ -6,7 +6,7 @@ func _on_SpawnTimer_timeout():
 	for i in 3:
 		var enemy = EnemyScene.instance()
 		add_child(enemy)
-		enemy.position = Vector2(rand_range(10, 170), 0)
+		enemy.position = Vector2(rand_range(20, 1280 - 20), 0)
 		enemy.connect("screen_exited", self, "_on_enemy_exited")
 
 func _on_enemy_exited():
